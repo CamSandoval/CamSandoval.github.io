@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+    <head>
+    <meta charset="UTF-8">
+    <title>Encriptar texto</title>
+    </head>
+    <body>
+    <h1>Encriptar texto</h1>
+    <label for="input-texto">Ingresa el texto a encriptar:</label>
+    <input type="text" id="input-texto">
+    <button onclick="encriptarTexto()">Encriptar</button>
+    <p>El texto encriptado es: <span id="texto-encriptado"></span></p>
+    
+    <script>
+        function encriptarTexto() {
+        const inputTexto = document.getElementById('input-texto').value;
+        let textoEncriptado = '';
+        for (let i = 0; i < inputTexto.length; i++) {
+            if (inputTexto[i] === 'a' || inputTexto[i] === 'A') {
+            textoEncriptado += 'bbb';
+            } else if (inputTexto[i] === 'e' || inputTexto[i] === 'E') {
+            textoEncriptado += 'xxx';
+            } else {
+            textoEncriptado += inputTexto[i];
+            }
+        }
+        document.getElementById('texto-encriptado').innerText = textoEncriptado;
+        }
+    </script>
+    </body>
+</html>
