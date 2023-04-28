@@ -1,0 +1,107 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@500&display=swap');
+body{
+    display: flex;
+    background-color: #E5E5E5;
+}
+#input{
+    width: 1000px;
+    height: 700px;
+}
+
+#input img{
+    height: 44px;
+    width: 120px;
+    border-radius: 0px;
+    display: inline;
+    margin-top: 20px;
+
+}
+#input-texto{
+    border: none;
+    width: 880px;
+    height: 350px;
+    padding: 0 44px;
+    background-color: inherit;
+    font-family: 'Inter', sans-serif;
+    font-size: 28px;
+    color: #0A3871;
+    margin: 50px 0;
+    vertical-align: top;
+    resize: none;
+    outline: none;
+}
+
+#input-texto::placeholder{
+    font-family: 'Inter', sans-serif;
+    font-size: 28px;
+    font-weight: 400;
+    text-align: start; 
+    color: #0A3871;
+}
+#buttons{
+    display: flex;
+    justify-content: center;
+    margin-top: 120px;
+    margin-left: 50px;
+}
+button{
+    width: 250px;
+    height: 60px;
+    margin-right: 150px;
+    border-radius: 15px;
+}
+
+#buttons :nth-child(1){
+    background: #0A3871;
+    color: #D8DFE8;
+}
+
+#buttons :nth-child(2){
+    background: #D8DFE8;
+    color: #0A3871;
+    border-color: #0A3871
+}
+#output{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Inter', sans-serif;
+    width: 400px;
+    height: 700px;
+    background-color: #FFFFFF;
+    margin-left: 20px;
+    border-radius: 15px;
+    margin-top: 15px;
+}
+#text-output{
+    font-size: 20px;
+    color: #495057;
+}
+#texts{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#img-oputput{
+    height: 304px;
+    width: 336px;
+}
+#output .inactive {
+    display: none; 
+}
+.add-heigth{
+    width: 320px;
+    height: inherit;
+}
+#texts :nth-child(2){
+    font-size: 20px;
+    font-weight: bold;
+}
+#texts :nth-child(3){
+    color: #495057;
+    ;
+}
+
+
+

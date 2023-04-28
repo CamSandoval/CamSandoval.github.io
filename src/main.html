@@ -8,13 +8,22 @@
     <title>Encriptar texto</title>
 </head>
 <body>
-    <div>
-        <h1>Encriptar texto</h1>
-        <label for="input-texto">Ingresa el texto a encriptar:</label>
-        <input type="text" id="input-texto" placeholder="Ingrese el texto aqui">
-        <button id="Button-Encriptar">Encriptar</button>
-        <button id="Button -Desencriptar">Desencriptar</button>
-        <p>El texto <span id="opcion-desencriptado"></span>encriptado es: <span id="texto-encriptado"></span></p>
+    <div id="input">
+        <img src="../logos/Logo-1.png" alt="logo-alura">
+        <textarea name="input" id="input-texto"  placeholder="Ingrese el texto aqui"></textarea>
+        <div id="buttons">
+            <button id="Button-Encriptar">Encriptar</button>
+            <button id="Button -Desencriptar">Desencriptar</button>
+        </div>
+    </div>
+
+    <div id="output">
+        <p id="text-output" class=""><span id="opcion-desencriptado"></span><span id="texto-encriptado"></span></p>
+        <div id="texts" class="">
+            <img src="../logos/Muñeco.png" alt="muñeco" id="img-oputput" >
+            <p>Ningún mensaje fue encontrado</p>
+            <p>Ingrese el texto que desea Encriptar</p>
+        </div>
     </div>
 <script src="./src.js"></script>
 </body>

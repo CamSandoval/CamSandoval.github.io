@@ -1,5 +1,7 @@
 const buttonEncriptar = document.getElementById('Button-Encriptar');
-const buttonDesencriptar = document.getElementById('Button -Desencriptar')
+const buttonDesencriptar = document.getElementById('Button -Desencriptar');
+const textsOputput= document.getElementById('texts');
+const output = document.getElementById('text-output');
 
 buttonEncriptar.addEventListener('click',encriptarTexto);
 buttonDesencriptar.addEventListener('click',desencriptarTexto);
@@ -14,6 +16,7 @@ function encriptarTexto() {
     }
     const inputTexto = document.getElementById('input-texto').value;
     let textoEncriptado = '';
+    const textsIsClosed = textsOputput.classList.contains('inactive');
     for (let i = 0; i < inputTexto.length; i++) {
         if (vocales.a.some( item => item == inputTexto[i])/*'a' || inputTexto[i] === 'A'|| inputTexto[i] === 'á'|| inputTexto[i] === 'Á'*/) {
             textoEncriptado += 'ai';
@@ -29,13 +32,19 @@ function encriptarTexto() {
             textoEncriptado += inputTexto[i];
         }
     }
+
+    if(!textsIsClosed){
+        textsOputput.classList.add('inactive');
+        output.classList.add('add-heigth');
+    }
     document.getElementById('texto-encriptado').innerText = textoEncriptado;
-    document.getElementById('opcion-desencriptado').innerText = '';
+    document.getElementById('opcion-desencriptado').innerHTML = 'El texto encriptado es: <br></br>';
 }
 
 function desencriptarTexto() {
     const inputTextoEncriptado = document.getElementById('input-texto').value;
     let textoDesencriptado = '';
+    const textsIsClosed = textsOputput.classList.contains('inactive');
     for (let i = 0; i < inputTextoEncriptado.length; i++) {
         /*if (inputTextoEncriptado[i] === 'a' && inputTextoEncriptado[i+1] === 'i' ) {
             textoDesencriptado += 'a';
@@ -60,7 +69,10 @@ function desencriptarTexto() {
             textoDesencriptado += inputTextoEncriptado[i];
         }
     }
-
-    document.getElementById('texto-encriptado').innerText = textoDesencriptado
-    document.getElementById('opcion-desencriptado').innerText = 'des';
+    if(!textsIsClosed){
+        textsOputput.classList.add('inactive');
+        output.classList.add('add-heigth');
+    }
+    document.getElementById('texto-encriptado').innerText = textoDesencriptado;
+    document.getElementById('opcion-desencriptado').innerHTML = 'El texto desencriptado es: <br></br>';
 }
