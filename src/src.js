@@ -2,9 +2,11 @@ const buttonEncriptar = document.getElementById('Button-Encriptar');
 const buttonDesencriptar = document.getElementById('Button -Desencriptar');
 const textsOputput= document.getElementById('texts');
 const output = document.getElementById('text-output');
+const copyButton = document.getElementById('copy-button');
 
 buttonEncriptar.addEventListener('click',encriptarTexto);
 buttonDesencriptar.addEventListener('click',desencriptarTexto);
+copyButton.addEventListener('click',copyClipBoard)
 
 function encriptarTexto() {
     const vocales= {
@@ -32,13 +34,16 @@ function encriptarTexto() {
             textoEncriptado += inputTexto[i];
         }
     }
+    if(!inputTexto == ''){
+        if(!textsIsClosed){
+            textsOputput.classList.add('inactive');
+            output.classList.add('add-heigth');
+            copyButton.classList.remove('inactive')
+        }
 
-    if(!textsIsClosed){
-        textsOputput.classList.add('inactive');
-        output.classList.add('add-heigth');
+        document.getElementById('texto-encriptado').innerText = textoEncriptado;
+        copyButton.textContent='Copiar';
     }
-    document.getElementById('texto-encriptado').innerText = textoEncriptado;
-    document.getElementById('opcion-desencriptado').innerHTML = 'El texto encriptado es: <br></br>';
 }
 
 function desencriptarTexto() {
@@ -69,10 +74,19 @@ function desencriptarTexto() {
             textoDesencriptado += inputTextoEncriptado[i];
         }
     }
-    if(!textsIsClosed){
-        textsOputput.classList.add('inactive');
-        output.classList.add('add-heigth');
+    if(!inputTextoEncriptado == ''){
+        if(!textsIsClosed){
+            textsOputput.classList.add('inactive');
+            output.classList.add('add-heigth');
+            copyButton.classList.remove('inactive')
+        }
+        document.getElementById('texto-encriptado').innerText = textoDesencriptado;
+        copyButton.textContent='Copiar';
     }
-    document.getElementById('texto-encriptado').innerText = textoDesencriptado;
-    document.getElementById('opcion-desencriptado').innerHTML = 'El texto desencriptado es: <br></br>';
+}
+
+function copyClipBoard(){
+    const copied = output.textContent;
+    navigator.clipboard.writeText(copied);
+    copyButton.textContent='Copiado';
 }
