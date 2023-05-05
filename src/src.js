@@ -38,10 +38,12 @@ function encriptarTexto() {
         if(!textsIsClosed){
             textsOputput.classList.add('inactive');
             output.classList.add('add-heigth');
-            copyButton.classList.remove('inactive')
+            copyButton.classList.remove('inactive');
+            output.classList.remove('inactive');
         }
 
-        document.getElementById('texto-encriptado').innerText = textoEncriptado;
+        //document.getElementById('texto-encriptado').innerText = textoEncriptado;
+        output.innerText=textoEncriptado;
         copyButton.textContent='Copiar';
     }
 }
@@ -78,9 +80,10 @@ function desencriptarTexto() {
         if(!textsIsClosed){
             textsOputput.classList.add('inactive');
             output.classList.add('add-heigth');
-            copyButton.classList.remove('inactive')
+            copyButton.classList.remove('inactive');
+            output.classList.remove('inactive');
         }
-        document.getElementById('texto-encriptado').innerText = textoDesencriptado;
+        output.innerText = textoDesencriptado;
         copyButton.textContent='Copiar';
     }
 }

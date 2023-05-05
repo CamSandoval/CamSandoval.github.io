@@ -8,21 +8,25 @@
     <title>Encriptar texto</title>
 </head>
 <body>
-    <div id="input">
+    <main id="input">
         <img src="../logos/Logo-1.png" alt="logo-alura">
         <textarea name="input" id="input-texto"  placeholder="Ingrese el texto aqui"></textarea>
-        <div id="buttons">
-            <button id="Button-Encriptar">Encriptar</button>
-            <button id="Button -Desencriptar">Desencriptar</button>
+        <div id="advertencia">
+            <img src="../logos/bi_exclamation-circle-fill-1.png" alt=""><p>Este encriptador es capaz de encriptar letras en Mayuscula y con acento, más no puede desencriptar estos caracteres</p>
         </div>
+        <div id="buttons">
+        <button id="Button-Encriptar">Encriptar</button>
+        <button id="Button -Desencriptar">Desencriptar</button>
     </div>
+    </main>
 
     <div id="output">
-        <p id="text-output" class=""><span id="texto-encriptado"></span></p>
+        <!-- <textarea id="text-output" class=""><span id="texto-encriptado"></span></textarea> -->
+        <textarea id="text-output" class="inactive"></textarea>
         <div id="texts" class="">
             <img src="../logos/Muñeco.png" alt="muñeco" id="img-oputput" >
             <p>Ningún mensaje fue encontrado</p>
-            <p>Ingrese el texto que desea Encriptar</p>
+            <p>Ingrese el texto que desea Encriptar o Desencriptar</p>
         </div>
         <button id="copy-button" class="inactive">Copiar</button>
     </div>
