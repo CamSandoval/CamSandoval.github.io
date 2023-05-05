@@ -1,0 +1,23 @@
+{
+  "name": "challenge_encriptador",
+  "version": "1.0.0",
+  "description": "Este es una pagina capaz de encriptar mensajes y desencriptarlos",
+  "main": "index.js",
+  "scripts": {
+    "deploy": "gh-pages -d src"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/CamSandoval/Challenge-encriptador-ONE.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/CamSandoval/Challenge-encriptador-ONE/issues"
+  },
+  "homepage": "https://github.com/CamSandoval/Challenge-encriptador-ONE#readme",
+  "devDependencies": {
+    "gh-pages": "^5.0.0"
+  }
+}

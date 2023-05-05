@@ -184,7 +184,7 @@ header{
         display: none;
     }
 }
-@media (max-width: 670px) {
+@media (max-width: 720px) {
     #input{
         width: 21em;
         height: 40em;
