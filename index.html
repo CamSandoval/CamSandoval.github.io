@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./style.css">
+    <title>Encriptar texto</title>
+</head>
+<body>
+    <main id="input">
+        <img src="../logos/Logo-1.png" alt="logo-alura">
+        <textarea name="input" id="input-texto"  placeholder="Ingrese el texto aqui"></textarea>
+        <div id="advertencia">
+            <img src="../logos/bi_exclamation-circle-fill-1.png" alt=""><p>Este encriptador es capaz de encriptar letras en Mayuscula y con acento, más no puede desencriptar estos caracteres</p>
+        </div>
+        <div id="buttons">
+        <button id="Button-Encriptar">Encriptar</button>
+        <button id="Button -Desencriptar">Desencriptar</button>
+    </div>
+    </main>
+
+    <div id="output">
+        <!-- <textarea id="text-output" class=""><span id="texto-encriptado"></span></textarea> -->
+        <textarea id="text-output" class="inactive"></textarea>
+        <div id="texts" class="">
+            <img src="../logos/Muñeco.png" alt="muñeco" id="img-oputput" >
+            <p>Ningún mensaje fue encontrado</p>
+            <p>Ingrese el texto que desea Encriptar o Desencriptar</p>
+        </div>
+        <button id="copy-button" class="inactive">Copiar</button>
+    </div>
+<script src="./src.js"></script>
+</body>
+</html>
